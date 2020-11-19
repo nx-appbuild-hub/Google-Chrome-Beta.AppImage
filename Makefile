@@ -36,7 +36,6 @@ all:
 	cp --force --recursive $(PWD)/AppDir/* $(PWD)/build/AppDir
 
 	chmod 755 $(PWD)/build/AppDir/chrome-beta/chrome-sandbox
-	chown root $(PWD)/build/AppDir/chrome-beta/chrome-sandbox
 
 	rm -rf AppDir/opt
 
