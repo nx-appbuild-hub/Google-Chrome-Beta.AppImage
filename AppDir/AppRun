@@ -35,7 +35,3 @@ if [ -z "${UUC_VALUE}" ]
     else
         exec ${APPDIR}/chrome-beta/chrome "$@"
     fi
-
-
-
-
