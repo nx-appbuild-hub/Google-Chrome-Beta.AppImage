@@ -16,7 +16,7 @@ PWD:=$(shell pwd)
 all: clean init
 	mkdir --parents $(PWD)/build/Boilerplate.AppDir
 	$(PWD)/bin/Apprepo.AppImage --destination=$(PWD)/build appdir boilerplate \
-	    libgdk-pixbuf2.0-0 libatk1.0-0 libatk-bridge2.0-0 libgtk2.0-0 \
+	    libgdk-pixbuf2.0-0 libatk1.0-0 libatk-bridge2.0-0 libgtk2.0-0 libbotan-2-12 \
 	    libreadline8 at-spi2-core libpango-1.0-0 libselinux1 \
 	    libgtk-3-0 libwayland-cursor0
 
@@ -36,6 +36,7 @@ all: clean init
 	rm -f $(PWD)/build/Boilerplate.AppDir/*.desktop 		|| true
 	rm -f $(PWD)/build/Boilerplate.AppDir/*.png 		  	|| true
 	rm -f $(PWD)/build/Boilerplate.AppDir/*.svg 		  	|| true
+	rm -f $(PWD)/build/Boilerplate.AppDir/lib64/libstdc++.so.6*
 
 	cp --force $(PWD)/AppDir/*.desktop 			$(PWD)/build/Boilerplate.AppDir/ || true
 	cp --force $(PWD)/AppDir/*.png 				$(PWD)/build/Boilerplate.AppDir/ || true
